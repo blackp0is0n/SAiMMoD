@@ -21,6 +21,13 @@ Generator.prototype.normalizedArray = function(){
   });
 }
 
+Generator.prototype.stringElements = function(){
+  return this.normalizedArray().map((element) => {
+    return element.toFixed(1);
+  }).join(', ');
+}
+
+
 Generator.prototype.mathExp = function(){
   var sum = 0;
   this.normalizedArray().forEach((element) => {
@@ -62,7 +69,7 @@ var generate = function(){
   $('#math').text(math.toFixed(4));
   $('#disp').text(disp.toFixed(4));
   $('#sqr').text(div.toFixed(4));
-
+  $('#elements').text(generator.stringElements());
   var data = [
     {
       x: normalizedFreq,
