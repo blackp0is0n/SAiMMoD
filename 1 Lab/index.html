@@ -2,11 +2,25 @@
 <html>
 <head>
 	<title>Lab 1</title>
+  <meta charset="UTF-8">
 	<script type="text/javascript" src="lib/plotly-latest.min.js"></script>
+  <script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-	<h1>Laba 1. SAiMMoD</h1>
+	<h1>Лабораторная работа 1. САиММоД</h1>
+  <p>Количство точек(n):  <input type="number" value="5" id="n"></p>
+  <p>Максимальное значение (m):  <input type="number" value="10" id="m"></p>
+  <p>Начальное значение (seed):  <input type="number" value="3" id="seed"></p>
+  <p>Константа a (a):  <input type="number" value="2" id="a"></p>
+  <p>Константа c (c):  <input type="number" value="0" id="c"></p>
+  <button onclick="generate()">Сгенерировать последовательность</button>
+  <hr/>
+
+  <p>Математическое ожидание: <b><span id="math"></span></b></p>
+  <p>Дисперсия: <b><span id="disp"></span></b></p>
+  <p>Среднеквадратичное отклонение: <b><span id="sqr"></span></b></p>
 	<div id="pane"/>
+
 	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
